@@ -17,6 +17,18 @@
 *.zip
 *.tar.gz
 *.rar
+*.iml
+
+# folder #
+/gen
+/out
+/bin
+/build
+*/build
+.idea
+/.gradle
+/tmp
+/captures
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
