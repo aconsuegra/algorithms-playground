@@ -29,14 +29,14 @@ public class StackTest {
     @Test
     public void testPeek() {
         stack.push(1);
-        assertThat(stack.isEmpty(), is(false));
         assertThat(stack.peek(), is(1));
     }
 
     @Test
-    public void pop() {
+    public void testPop() {
         stack.push(1);
-        assertThat(stack.isEmpty(), is(false));
+        stack.push(2);
+        assertThat(stack.pop(), is(2));
         assertThat(stack.pop(), is(1));
         assertThat(stack.isEmpty(), is(true));
     }
