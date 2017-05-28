@@ -16,12 +16,28 @@ public class ValidParenthesisTest {
     }
 
     @Test
-    public void isValid() {
+    public void testOneParenthesis() {
         assertThat(validParenthesis.isValid("["), is(false));
+    }
+
+    @Test
+    public void testTwoParenthesis() {
         assertThat(validParenthesis.isValid("()"), is(true));
-        assertThat(validParenthesis.isValid("()[]{}"), is(true));
+    }
+
+    @Test
+    public void testFourInvalidParenthesis() {
         assertThat(validParenthesis.isValid("([)]"), is(false));
+    }
+
+    @Test
+    public void testSixInvalidParenthesis() {
         assertThat(validParenthesis.isValid("([]{})"), is(true));
+    }
+
+    @Test
+    public void testSixValidParenthesis() {
+        assertThat(validParenthesis.isValid("()[]{}"), is(true));
     }
 
 }

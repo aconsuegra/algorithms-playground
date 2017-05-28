@@ -16,9 +16,12 @@ public class HammingDistanceTest {
     }
 
     @Test
-    public void hammingDistance() {
-        assertThat(hammingDistance.hammingDistance(4, 1), is(2));
+    public void testNoDistance() {
         assertThat(hammingDistance.hammingDistance(4, 4), is(0));
+    }
+
+    @Test
+    public void testDistance() {
         assertThat(hammingDistance.hammingDistance(7, 0), is(3));
     }
 

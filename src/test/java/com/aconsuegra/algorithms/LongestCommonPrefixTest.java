@@ -16,15 +16,40 @@ public class LongestCommonPrefixTest {
     }
 
     @Test
-    public void longestCommonPrefix() {
+    public void testNullString() {
         assertThat(longestCommonPrefix.longestCommonPrefix(null), is(""));
-        assertThat(longestCommonPrefix.longestCommonPrefix(new String[]{}), is(""));
-        assertThat(longestCommonPrefix.longestCommonPrefix(new String[]{""}), is(""));
-        assertThat(longestCommonPrefix.longestCommonPrefix(new String[]{"abc"}), is("abc"));
-        assertThat(longestCommonPrefix.longestCommonPrefix(new String[]{"abc", "abc"}), is("abc"));
-        assertThat(longestCommonPrefix.longestCommonPrefix(new String[]{"abcde", "abc"}), is("abc"));
-        assertThat(longestCommonPrefix.longestCommonPrefix(new String[]{"aaaaa", "aaa", "aab", "a"}), is("a"));
-        assertThat(longestCommonPrefix.longestCommonPrefix(new String[]{"aaaaa", "aaa", "aab", "a", "b"}), is(""));
+    }
+
+    @Test
+    public void testNoStrings() {
+        assertThat(longestCommonPrefix.longestCommonPrefix(new String[] {}), is(""));
+    }
+
+    @Test
+    public void testEmptyString() {
+        assertThat(longestCommonPrefix.longestCommonPrefix(new String[] {""}), is(""));
+    }
+
+    @Test
+    public void test1String() {
+        assertThat(longestCommonPrefix.longestCommonPrefix(new String[] {"abc"}), is("abc"));
+    }
+
+    @Test
+    public void test2Strings() {
+        assertThat(longestCommonPrefix.longestCommonPrefix(new String[] {"abcde", "abc"}), is("abc"));
+    }
+
+    @Test
+    public void test4Strings() {
+        assertThat(longestCommonPrefix.longestCommonPrefix(new String[] {"aaaaa", "aaa", "aab", "a"}),
+                is("a"));
+    }
+
+    @Test
+    public void test5Strings() {
+        assertThat(longestCommonPrefix.longestCommonPrefix(new String[] {"aaaaa", "aaa", "aab", "a", "b"}),
+                is(""));
     }
 
 }

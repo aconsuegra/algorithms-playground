@@ -19,14 +19,17 @@ public class DeleteMiddleNodeTest {
     }
 
     @Test
-    public void deleteNode() {
-        ListNode<Integer> list1 = LinkedListUtils.createLinkedListFor(1, 2, 3);
-        deleteMiddleNode.deleteNode(list1.getNext());
-        assertThat(list1, is(LinkedListUtils.createLinkedListFor(1, 3)));
+    public void testDeleteMiddle() {
+        ListNode<Integer> list = LinkedListUtils.createLinkedListFor(1, 2, 3);
+        deleteMiddleNode.deleteNode(list.getNext());
+        assertThat(list, is(LinkedListUtils.createLinkedListFor(1, 3)));
+    }
 
-        list1 = LinkedListUtils.createLinkedListFor(1, 2, 3, 4, 5, 6);
-        deleteMiddleNode.deleteNode(list1.getNext().getNext());
-        assertThat(list1, is(LinkedListUtils.createLinkedListFor(1, 2, 4, 5, 6)));
+    @Test
+    public void testDeleteThird() {
+        ListNode<Integer> list = LinkedListUtils.createLinkedListFor(1, 2, 3, 4, 5, 6);
+        deleteMiddleNode.deleteNode(list.getNext().getNext());
+        assertThat(list, is(LinkedListUtils.createLinkedListFor(1, 2, 4, 5, 6)));
     }
 
 }

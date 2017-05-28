@@ -16,11 +16,23 @@ public class RemoveElementTest {
     }
 
     @Test
-    public void removeElement() {
-        assertThat(removeElement.removeElement(new int[] {3, 2, 2, 3}, 4),is(4));
-        assertThat(removeElement.removeElement(new int[] {3, 2, 2, 3}, 3),is(2));
-        assertThat(removeElement.removeElement(new int[] {3, 2, 3, 3}, 3),is(1));
-        assertThat(removeElement.removeElement(new int[] {}, 3),is(0));
+    public void testEmptyList() {
+        assertThat(removeElement.removeElement(new int[] {}, 3), is(0));
+    }
+
+    @Test
+    public void testNotFoundElement() {
+        assertThat(removeElement.removeElement(new int[] {3, 2, 2, 3}, 4), is(4));
+    }
+
+    @Test
+    public void testLastElement() {
+        assertThat(removeElement.removeElement(new int[] {3, 2, 3, 3}, 3), is(1));
+    }
+
+    @Test
+    public void testAllButOneElement() {
+        assertThat(removeElement.removeElement(new int[] {3, 2, 3, 3}, 3), is(1));
     }
 
 }

@@ -16,11 +16,19 @@ public class URLifyTest {
     }
 
     @Test
-    public void replaceSpaces() {
+    public void testOneSpaceStartOneSpaceEnd() {
         assertThat(urlify.replaceSpaces(" John     ".toCharArray(), 6),
                 is("%20John%20".toCharArray()));
+    }
+
+    @Test
+    public void testOneSpaceMiddle() {
         assertThat(urlify.replaceSpaces("Mr John Smith    ".toCharArray(), 13),
                 is("Mr%20John%20Smith".toCharArray()));
+    }
+
+    @Test
+    public void testThreeSpacessMiddle() {
         assertThat(urlify.replaceSpaces("Mr   John      ".toCharArray(), 9),
                 is("Mr%20%20%20John".toCharArray()));
     }

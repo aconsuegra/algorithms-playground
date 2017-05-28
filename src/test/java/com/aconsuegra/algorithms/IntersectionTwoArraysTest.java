@@ -16,11 +16,25 @@ public class IntersectionTwoArraysTest {
     }
 
     @Test
-    public void intersection() {
-        assertThat(intersectionTwoArrays.intersection(new int[] {1, 2, 2, 1}, new int[] {2, 2}), is(new int[] {2}));
+    public void testEmptyArrays() {
         assertThat(intersectionTwoArrays.intersection(new int[] {}, new int[] {}), is(new int[] {}));
+    }
+
+    @Test
+    public void test1Intersection() {
+        assertThat(intersectionTwoArrays.intersection(new int[] {1, 2, 2, 1}, new int[] {2, 2}),
+                is(new int[] {2}));
+    }
+
+    @Test
+    public void testNoIntersections() {
         assertThat(intersectionTwoArrays.intersection(new int[] {1, 2, 3}, new int[] {4, 5, 6}), is(new int[] {}));
-        assertThat(intersectionTwoArrays.intersection(new int[] {1, 2, 3}, new int[] {2, 3, 4}), is(new int[] {2, 3}));
+    }
+
+    @Test
+    public void test2Intersections() {
+        assertThat(intersectionTwoArrays.intersection(new int[] {1, 2, 3}, new int[] {2, 3, 4}),
+                is(new int[] {2, 3}));
     }
 
 }

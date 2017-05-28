@@ -19,18 +19,30 @@ public class RemoveDuplicatesLinkedListTest {
     }
 
     @Test
-    public void removeDuplicates() {
-        ListNode<Integer> list1 = LinkedListUtils.createLinkedListFor(1, 2);
-        removeDuplicatesLinkedList.removeDuplicates(list1);
-        assertThat(list1, is(list1));
+    public void testNoDuplicates() {
+        ListNode<Integer> list = LinkedListUtils.createLinkedListFor(1, 2);
+        assertThat(removeDuplicatesLinkedList.removeDuplicates(list), is(list));
+    }
 
-        list1 = LinkedListUtils.createLinkedListFor(1, 2, 1);
-        removeDuplicatesLinkedList.removeDuplicates(list1);
-        assertThat(list1, is(LinkedListUtils.createLinkedListFor(1, 2)));
+    @Test
+    public void test1DuplicateEdges() {
+        ListNode<Integer> list = LinkedListUtils.createLinkedListFor(1, 2, 1);
+        assertThat(removeDuplicatesLinkedList.removeDuplicates(list),
+                is(LinkedListUtils.createLinkedListFor(1, 2)));
+    }
 
-        list1 = LinkedListUtils.createLinkedListFor(1, 2, 2, 3, 4, 5, 4, 6, 6, 6);
-        removeDuplicatesLinkedList.removeDuplicates(list1);
-        assertThat(list1, is(LinkedListUtils.createLinkedListFor(1, 2, 3, 4, 5, 6)));
+    @Test
+    public void test1DuplicateMiddle() {
+        ListNode<Integer> list = LinkedListUtils.createLinkedListFor(1, 2, 2);
+        assertThat(removeDuplicatesLinkedList.removeDuplicates(list),
+                is(LinkedListUtils.createLinkedListFor(1, 2)));
+    }
+
+    @Test
+    public void testSeveralDuplicates() {
+        ListNode<Integer> list = LinkedListUtils.createLinkedListFor(1, 2, 6, 2, 3, 4, 5, 4, 6, 6, 6);
+        assertThat(removeDuplicatesLinkedList.removeDuplicates(list),
+                is(LinkedListUtils.createLinkedListFor(1, 2, 6, 3, 4, 5)));
     }
 
 }

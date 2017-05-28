@@ -10,9 +10,10 @@ import com.aconsuegra.datastructure.ListNode;
  */
 public class RemoveDuplicatesLinkedList {
 
-    public void removeDuplicates(ListNode<Integer> input) {
+    public ListNode<Integer> removeDuplicates(ListNode<Integer> input) {
         Set<Integer> set = new HashSet<>();
-        ListNode lastValidNode = null;
+        ListNode<Integer> lastValidNode = null;
+        ListNode<Integer> head = input;
         while (input != null) {
             if(set.contains(input.getVal())) {
                 lastValidNode.setNext(input.getNext());
@@ -23,6 +24,7 @@ public class RemoveDuplicatesLinkedList {
 
             input = input.getNext();
         }
+        return head;
     }
 
 }

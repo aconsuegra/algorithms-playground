@@ -16,9 +16,17 @@ public class StringCompressionTest {
     }
 
     @Test
-    public void testCompress() {
-        assertThat(stringCompression.compress("a"), is("a"));
+    public void test1Character() {
+        assertThat(stringCompression.compress("abbcccccaaa"), is("a1b2c5a3"));
+    }
+
+    @Test
+    public void testTwoCharacters() {
         assertThat(stringCompression.compress("aa"), is("a2"));
+    }
+
+    @Test
+    public void testMultipleCharacters() {
         assertThat(stringCompression.compress("abbcccccaaa"), is("a1b2c5a3"));
     }
 
