@@ -16,9 +16,17 @@ public class MaxConsecutiveOnesTest {
     }
 
     @Test
-    public void findMaxConsecutiveOnes() {
+    public void testEndArray() {
         assertThat(maxConsecutiveOnes.findMaxConsecutiveOnes(new int[] {1, 1, 0, 1, 1, 1}), is(3));
+    }
+
+    @Test
+    public void testAllOverArray() {
         assertThat(maxConsecutiveOnes.findMaxConsecutiveOnes(new int[] {1, 0, 0, 1, 0, 1, 0}), is(1));
+    }
+
+    @Test
+    public void testMiddleAndEndArray() {
         assertThat(maxConsecutiveOnes.findMaxConsecutiveOnes(new int[] {1, 0, 1, 1, 0, 1}), is(2));
     }
 

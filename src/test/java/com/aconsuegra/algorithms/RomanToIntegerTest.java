@@ -16,12 +16,32 @@ public class RomanToIntegerTest {
     }
 
     @Test
-    public void romanToInt() {
+    public void test0() {
         assertThat(romanToInteger.romanToInt(""), is(0));
+    }
+
+    @Test
+    public void test11() {
         assertThat(romanToInteger.romanToInt("XI"), is(11));
+    }
+
+    @Test
+    public void test9() {
         assertThat(romanToInteger.romanToInt("IX"), is(9));
+    }
+
+    @Test
+    public void test1600() {
         assertThat(romanToInteger.romanToInt("MDC"), is(1600));
+    }
+
+    @Test
+    public void test949() {
         assertThat(romanToInteger.romanToInt("CMXLIX"), is(949));
+    }
+
+    @Test
+    public void test3783() {
         assertThat(romanToInteger.romanToInt("MMMDCCLXXXIII"), is(3783));
     }
 

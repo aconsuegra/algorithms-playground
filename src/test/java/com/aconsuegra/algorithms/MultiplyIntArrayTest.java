@@ -16,17 +16,35 @@ public class MultiplyIntArrayTest {
     }
 
     @Test
-    public void multiplyIntArrayOption1() {
-        assertThat(multiplyIntArray.multiplyIntArrayOption1(new int[] {1, 2, 3, 4}), is(new int[] {24, 12, 8, 6}));
-        assertThat(multiplyIntArray.multiplyIntArrayOption1(new int[] {6, -4, 0, 5}), is(new int[] {0, 0, -120, 0}));
+    public void testSmallArraySolution1() {
         assertThat(multiplyIntArray.multiplyIntArrayOption1(new int[] {3, 3}), is(new int[] {3, 3}));
     }
 
     @Test
-    public void multiplyIntArrayOption2() {
-        assertThat(multiplyIntArray.multiplyIntArrayOption2(new int[] {1, 2, 3, 4}), is(new int[] {24, 12, 8, 6}));
-        assertThat(multiplyIntArray.multiplyIntArrayOption2(new int[] {6, -4, 0, 5}), is(new int[] {0, 0, -120, 0}));
+    public void testMediumArrayWithZeroSolution1() {
+        assertThat(multiplyIntArray.multiplyIntArrayOption1(new int[] {6, -4, 0, 5}),
+                is(new int[] {0, 0, -120, 0}));
+    }
+
+    @Test
+    public void testMediumArraySolution1() {
+        assertThat(multiplyIntArray.multiplyIntArrayOption1(new int[] {1, 2, 3, 4}), is(new int[] {24, 12, 8, 6}));
+    }
+
+    @Test
+    public void testSmallArraySolution2() {
         assertThat(multiplyIntArray.multiplyIntArrayOption2(new int[] {3, 3}), is(new int[] {3, 3}));
+    }
+
+    @Test
+    public void testMediumArrayWithZeroSolution2() {
+        assertThat(multiplyIntArray.multiplyIntArrayOption2(new int[] {6, -4, 0, 5}),
+                is(new int[] {0, 0, -120, 0}));
+    }
+
+    @Test
+    public void testMediumArraySolution2() {
+        assertThat(multiplyIntArray.multiplyIntArrayOption2(new int[] {1, 2, 3, 4}), is(new int[] {24, 12, 8, 6}));
     }
 
 }

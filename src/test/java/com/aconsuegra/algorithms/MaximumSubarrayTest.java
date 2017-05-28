@@ -16,9 +16,17 @@ public class MaximumSubarrayTest {
     }
 
     @Test
-    public void maxSubArray() {
+    public void testSmallArray() {
         assertThat(maximumSubarray.maxSubArray(new int[] {-2, 1}), is(1));
+    }
+
+    @Test
+    public void testMediumArray() {
         assertThat(maximumSubarray.maxSubArray(new int[] {-2, 1, 2, -3}), is(3));
+    }
+
+    @Test
+    public void testLargeArray() {
         assertThat(maximumSubarray.maxSubArray(new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4}), is(6));
     }
 

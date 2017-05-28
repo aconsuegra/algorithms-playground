@@ -4,7 +4,7 @@ import com.aconsuegra.datastructure.ListNode;
 
 /**
  * You have two numbers represented by a linked list, where each node represents a single digit. The digits are
- * stored in reverse order, such as the 1's digit is at the head of the list. Write a function that adds the two
+ * stored in reverse1 order, such as the 1's digit is at the head of the list. Write a function that adds the two
  * numbers and return the sum as a linked list.
  * <p>
  * Example

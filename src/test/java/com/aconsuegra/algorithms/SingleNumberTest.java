@@ -16,14 +16,22 @@ public class SingleNumberTest {
     }
 
     @Test
-    public void testSingleNumber() {
+    public void testSmallInput() {
         assertThat(singleNumber.singleNumber(new int[] {1, 1, 2}), is(2));
+    }
+
+    @Test
+    public void testLargeInput() {
         assertThat(singleNumber.singleNumber(new int[] {1, 1, 2, 3, 3, 4, 4}), is(2));
     }
 
     @Test
-    public void testSingleNumberNoMemory() {
+    public void testSmallInputNoMemory() {
         assertThat(singleNumber.singleNumberNoMemory(new int[] {1, 1, 2}), is(2));
+    }
+
+    @Test
+    public void testLargeInputNoMemory() {
         assertThat(singleNumber.singleNumberNoMemory(new int[] {1, 1, 2, 3, 3, 4, 4}), is(2));
     }
 }

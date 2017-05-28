@@ -18,40 +18,59 @@ public class SumLinkedListsTest {
     }
 
     @Test
-    public void testSumLinkedLists() {
+    public void test1Plus1Entries() {
         assertThat(sumLinkedLists.sum(LinkedListUtils.createLinkedListFor(1),
                 LinkedListUtils.createLinkedListFor(2)),
                 is(LinkedListUtils.createLinkedListFor(3)));
+    }
 
+    @Test
+    public void test2Plus1Entries() {
         assertThat(sumLinkedLists.sum(LinkedListUtils.createLinkedListFor(2, 1),
                 LinkedListUtils.createLinkedListFor(7)),
                 is(LinkedListUtils.createLinkedListFor(9, 1)));
+    }
 
+    @Test
+    public void test3Plus3Entries() {
         assertThat(sumLinkedLists.sum(LinkedListUtils.createLinkedListFor(7, 1, 6),
                 LinkedListUtils.createLinkedListFor(5, 9, 2)),
                 is(LinkedListUtils.createLinkedListFor(2, 1, 9)));
+    }
 
+    @Test
+    public void test3Plus3EntriesOverflow() {
         assertThat(sumLinkedLists.sum(LinkedListUtils.createLinkedListFor(9, 7, 8),
                 LinkedListUtils.createLinkedListFor(6, 8, 5)),
                 is(LinkedListUtils.createLinkedListFor(5, 6, 4, 1)));
     }
 
     @Test
-    public void testSumLinkedListsRec() {
+    public void test1Plus1EntriesRecursive() {
         assertThat(sumLinkedLists.sumRec(LinkedListUtils.createLinkedListFor(1),
                 LinkedListUtils.createLinkedListFor(2)),
                 is(LinkedListUtils.createLinkedListFor(3)));
+    }
 
+    @Test
+    public void test2Plus1EntriesRecursive() {
         assertThat(sumLinkedLists.sumRec(LinkedListUtils.createLinkedListFor(2, 1),
                 LinkedListUtils.createLinkedListFor(7)),
                 is(LinkedListUtils.createLinkedListFor(9, 1)));
+    }
 
+    @Test
+    public void test3Plus3EntriesRecursive() {
         assertThat(sumLinkedLists.sumRec(LinkedListUtils.createLinkedListFor(7, 1, 6),
                 LinkedListUtils.createLinkedListFor(5, 9, 2)),
                 is(LinkedListUtils.createLinkedListFor(2, 1, 9)));
+    }
 
+    @Test
+    public void test3Plus3EntriesOverflowRecursive() {
         assertThat(sumLinkedLists.sumRec(LinkedListUtils.createLinkedListFor(9, 7, 8),
                 LinkedListUtils.createLinkedListFor(6, 8, 5)),
                 is(LinkedListUtils.createLinkedListFor(5, 6, 4, 1)));
     }
+
 }

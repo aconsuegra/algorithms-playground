@@ -16,39 +16,73 @@ public class SearchInsertPositionTest {
     }
 
     @Test
-    public void searchInsert() {
+    public void testEmptyArray() {
         assertThat(searchInsertPosition.searchInsert(new int[] {}, 4), is(0));
+    }
+
+    @Test
+    public void test1EntryNotFound() {
         assertThat(searchInsertPosition.searchInsert(new int[] {0}, 4), is(1));
+    }
+
+    @Test
+    public void test1EntryFound() {
         assertThat(searchInsertPosition.searchInsert(new int[] {0}, 0), is(0));
+    }
+
+    @Test
+    public void test2EntriesNotFound() {
         assertThat(searchInsertPosition.searchInsert(new int[] {1, 3}, 0), is(0));
-        assertThat(searchInsertPosition.searchInsert(new int[] {1, 3}, 4), is(2));
-        assertThat(searchInsertPosition.searchInsert(new int[] {1, 2, 3}, 4), is(3));
-        assertThat(searchInsertPosition.searchInsert(new int[] {1, 2, 3}, 0), is(0));
-        assertThat(searchInsertPosition.searchInsert(new int[] {1, 2, 3, 4}, 4), is(3));
-        assertThat(searchInsertPosition.searchInsert(new int[] {1, 2, 3, 4, 5}, 3), is(2));
-        assertThat(searchInsertPosition.searchInsert(new int[] {1, 2, 3, 4, 5}, 1), is(0));
-        assertThat(searchInsertPosition.searchInsert(new int[] {1, 3, 5, 6}, 5), is(2));
-        assertThat(searchInsertPosition.searchInsert(new int[] {1, 3, 5, 6}, 2), is(1));
-        assertThat(searchInsertPosition.searchInsert(new int[] {1, 3, 5, 6}, 9), is(4));
+    }
+
+    @Test
+    public void test2EntriesFound() {
+        assertThat(searchInsertPosition.searchInsert(new int[] {1, 3}, 3), is(1));
+    }
+
+    @Test
+    public void testLargeArrayNotFound() {
         assertThat(searchInsertPosition.searchInsert(new int[] {3, 5, 7, 9, 10}, 8), is(3));
     }
 
     @Test
-    public void searchInsertRec() {
+    public void testLargeArrayFound() {
+        assertThat(searchInsertPosition.searchInsert(new int[] {3, 5, 7, 9, 10}, 7), is(2));
+    }
+
+    @Test
+    public void testEmptyArrayRec() {
         assertThat(searchInsertPosition.searchInsertRec(new int[] {}, 4), is(0));
+    }
+
+    @Test
+    public void test1EntryNotFoundRec() {
         assertThat(searchInsertPosition.searchInsertRec(new int[] {0}, 4), is(1));
+    }
+
+    @Test
+    public void test1EntryFoundRec() {
         assertThat(searchInsertPosition.searchInsertRec(new int[] {0}, 0), is(0));
+    }
+
+    @Test
+    public void test2EntriesNotFoundRec() {
         assertThat(searchInsertPosition.searchInsertRec(new int[] {1, 3}, 0), is(0));
-        assertThat(searchInsertPosition.searchInsertRec(new int[] {1, 3}, 4), is(2));
-        assertThat(searchInsertPosition.searchInsertRec(new int[] {1, 2, 3}, 4), is(3));
-        assertThat(searchInsertPosition.searchInsertRec(new int[] {1, 2, 3}, 0), is(0));
-        assertThat(searchInsertPosition.searchInsertRec(new int[] {1, 2, 3, 4}, 4), is(3));
-        assertThat(searchInsertPosition.searchInsertRec(new int[] {1, 2, 3, 4, 5}, 3), is(2));
-        assertThat(searchInsertPosition.searchInsertRec(new int[] {1, 2, 3, 4, 5}, 1), is(0));
-        assertThat(searchInsertPosition.searchInsertRec(new int[] {1, 3, 5, 6}, 5), is(2));
-        assertThat(searchInsertPosition.searchInsertRec(new int[] {1, 3, 5, 6}, 2), is(1));
-        assertThat(searchInsertPosition.searchInsertRec(new int[] {1, 3, 5, 6}, 9), is(4));
+    }
+
+    @Test
+    public void test2EntriesFoundRec() {
+        assertThat(searchInsertPosition.searchInsertRec(new int[] {1, 3}, 3), is(1));
+    }
+
+    @Test
+    public void testLargeArrayNotFoundRec() {
         assertThat(searchInsertPosition.searchInsertRec(new int[] {3, 5, 7, 9, 10}, 8), is(3));
+    }
+
+    @Test
+    public void testLargeArrayFoundRec() {
+        assertThat(searchInsertPosition.searchInsertRec(new int[] {3, 5, 7, 9, 10}, 7), is(2));
     }
 
 }

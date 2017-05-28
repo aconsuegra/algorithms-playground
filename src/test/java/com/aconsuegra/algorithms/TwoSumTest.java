@@ -17,14 +17,22 @@ public class TwoSumTest {
 
     @Test(expected = IllegalStateException.class)
     public void twoSumNotFound() {
-        twoSum.twoSum(new int[]{1, 2, 3}, 7);
+        twoSum.twoSum(new int[] {1, 2, 3}, 7);
     }
 
     @Test
-    public void twoSum() {
-        assertThat(twoSum.twoSum(new int[]{1, 2, 3}, 3), is(new int[]{0, 1}));
-        assertThat(twoSum.twoSum(new int[]{4, 2, 10, 1}, 5), is(new int[]{0, 3}));
-        assertThat(twoSum.twoSum(new int[]{1, 1}, 2), is(new int[]{0, 1}));
+    public void twoSum2Entries() {
+        assertThat(twoSum.twoSum(new int[] {1, 1}, 2), is(new int[] {0, 1}));
+    }
+
+    @Test
+    public void twoSum3Entries() {
+        assertThat(twoSum.twoSum(new int[] {1, 2, 3}, 3), is(new int[] {0, 1}));
+    }
+
+    @Test
+    public void twoSum4Entries() {
+        assertThat(twoSum.twoSum(new int[] {4, 2, 10, 1}, 5), is(new int[] {0, 3}));
     }
 
 }

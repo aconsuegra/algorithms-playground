@@ -11,20 +11,15 @@ public class MaximumSubarray {
     public int maxSubArray(int[] nums) {
         int maxSum = Integer.MIN_VALUE;
         int acc = 0;
-        int startIndex = 0;
-        int endIndex = 0;
-        for (int i = 0; i < nums.length; i++) {
-            acc += nums[i];
+        for (int num : nums) {
+            acc += num;
             if (maxSum < acc) {
                 maxSum = acc;
-                endIndex = i;
             }
             if (acc < 0) {
                 acc = 0;
-                startIndex = i + 1;
             }
         }
-        System.out.printf("[%d-%d]\n", startIndex, endIndex);
         return maxSum;
     }
 
