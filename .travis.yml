@@ -14,6 +14,3 @@ cache:
 
 jdk:
   - oraclejdk8
-
-script:
-  - ./gradlew clean check --continue --stacktrace
