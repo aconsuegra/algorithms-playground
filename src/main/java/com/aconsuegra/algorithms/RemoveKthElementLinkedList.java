@@ -41,4 +41,23 @@ public class RemoveKthElementLinkedList {
         }
         return size;
     }
+
+    public <T> ListNode<T> removeNthFromEndOnePass(ListNode<T> head, int n) {
+        ListNode<T> result = head;
+        ListNode<T> pointer = result;
+        int i = 0;
+        while (head != null) {
+            if (i > n) {
+                pointer = pointer.getNext();
+            }
+            i++;
+            head = head.getNext();
+        }
+        if (n == i) {
+            result = pointer.getNext();
+        } else {
+            pointer.setNext(pointer.getNext().getNext());
+        }
+        return result;
+    }
 }

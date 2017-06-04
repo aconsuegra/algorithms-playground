@@ -28,6 +28,38 @@ public class BinaryTreeTraversal<T> {
         }
     }
 
+    public void depth(BinaryTreeNode<T> node) {
+        int height = height(node);
+        for (int i = 0; i <= height; i++) {
+            visitLevel(node, i);
+        }
+    }
+
+    private int height(BinaryTreeNode<T> node) {
+        if (node == null) {
+            return 0;
+        }
+        int leftHeight = height(node.getLeft());
+        int rightHeight = height(node.getRight());
+
+        if (leftHeight > rightHeight) {
+            return leftHeight + 1;
+        } else {
+            return rightHeight + 1;
+        }
+    }
+
+    private void visitLevel(BinaryTreeNode<T> node, int level) {
+        if (node != null) {
+            if (level == 1) {
+                visit(node);
+            } else if (level > 1) {
+                visitLevel(node.getLeft(), level -1);
+                visitLevel(node.getRight(), level -1);
+            }
+        }
+    }
+
     private void visit(BinaryTreeNode<T> node) {
         System.out.println("node = [" + node.getVal() + "]");
     }
