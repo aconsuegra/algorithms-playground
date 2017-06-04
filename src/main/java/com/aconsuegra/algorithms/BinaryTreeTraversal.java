@@ -54,8 +54,8 @@ public class BinaryTreeTraversal<T> {
             if (level == 1) {
                 visit(node);
             } else if (level > 1) {
-                visitLevel(node.getLeft(), level -1);
-                visitLevel(node.getRight(), level -1);
+                visitLevel(node.getLeft(), level - 1);
+                visitLevel(node.getRight(), level - 1);
             }
         }
     }

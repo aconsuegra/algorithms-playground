@@ -15,7 +15,7 @@ public class RemoveDuplicatesLinkedList {
         ListNode<Integer> lastValidNode = null;
         ListNode<Integer> head = input;
         while (input != null) {
-            if(set.contains(input.getVal())) {
+            if (set.contains(input.getVal())) {
                 lastValidNode.setNext(input.getNext());
             } else {
                 set.add(input.getVal());

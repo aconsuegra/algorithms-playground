@@ -3,9 +3,9 @@ package com.aconsuegra.algorithms;
 /**
  * There are three types of edits that can be performed on strings: insert a character, remove a character, or
  * replace a character. Given two strings, write a function to check if they are one edit (or) zero edits away.
- *
+ * <p>
  * Examples:
- *
+ * <p>
  * pale,  ple  -> true
  * pales, pale -> true
  * pale,  bale -> true
@@ -34,7 +34,7 @@ public class OneAway {
 
         int indexShorterString = 0;
         int indexLongerString = 0;
-        while(indexShorterString < shorterString.length() && indexLongerString < longerString.length()) {
+        while (indexShorterString < shorterString.length() && indexLongerString < longerString.length()) {
             if (shorterString.charAt(indexShorterString) != longerString.charAt(indexLongerString)) {
                 if (numChanges == 1) {
                     return false;

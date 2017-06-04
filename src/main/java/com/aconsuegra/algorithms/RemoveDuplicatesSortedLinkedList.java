@@ -1,8 +1,5 @@
 package com.aconsuegra.algorithms;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.aconsuegra.datastructure.ListNode;
 
 /**

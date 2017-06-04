@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 public final class BinaryTreeUtils {
 
+    private BinaryTreeUtils() {
+        // Not meant to be instantiated
+    }
+
     public static <T> BinaryTreeNode<T> createBalancedSearchTreeFor(T... input) {
         if (input == null || input.length == 0) {
             return null;

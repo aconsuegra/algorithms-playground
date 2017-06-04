@@ -1,6 +1,5 @@
 package com.aconsuegra.datastructure;
 
-import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 
 public class Queue<T> {
@@ -43,7 +42,7 @@ public class Queue<T> {
         return data;
     }
 
-    private static class QueueItem<T> {
+    private static final class QueueItem<T> {
         private final T data;
 
         private QueueItem<T> next;

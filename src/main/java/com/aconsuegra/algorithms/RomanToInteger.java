@@ -33,6 +33,8 @@ public class RomanToInteger {
             case 'I':
                 result += (lastChar == 'X' || lastChar == 'V') ? -1 : 1;
                 break;
+            default:
+                throw new IllegalStateException("Invalid roman number");
             }
             lastChar = s.charAt(i);
         }

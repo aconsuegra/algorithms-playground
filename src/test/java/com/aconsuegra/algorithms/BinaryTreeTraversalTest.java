@@ -3,10 +3,7 @@ package com.aconsuegra.algorithms;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.aconsuegra.datastructure.BinaryTreeNode;
 import com.aconsuegra.datastructure.BinaryTreeUtils;
-
-import static org.junit.Assert.*;
 
 public class BinaryTreeTraversalTest {
 
