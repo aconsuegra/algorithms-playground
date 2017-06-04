@@ -12,4 +12,4 @@ jdk:
   - oraclejdk8
 
 script:
-  ./gradlew clean check --parallel --continue
+  - ./gradlew clean check --continue --stacktrace
