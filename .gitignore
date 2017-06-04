@@ -23,3 +23,4 @@
 hs_err_pid*
 !/gradlew
 !/gradlew.bat
+!/gradle/wrapper/gradle-wrapper.jar
