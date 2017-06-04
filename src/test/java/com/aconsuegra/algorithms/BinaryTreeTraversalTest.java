@@ -33,6 +33,11 @@ public class BinaryTreeTraversalTest {
     }
 
     @Test
+    public void testDepthBalancedSearchTree() {
+        binaryTreeTraversal.depth(BinaryTreeUtils.createBalancedSearchTreeFor(4, 2, 7, 5, 9, 1, 8));
+    }
+
+    @Test
     public void testInOrderBalancedBinaryTree() {
         binaryTreeTraversal.inOrder(BinaryTreeUtils.createBalancedBinaryTreeFor(4, 2, 7, 5, 9, 1, 8));
     }
@@ -45,6 +50,11 @@ public class BinaryTreeTraversalTest {
     @Test
     public void testPostOrderBalancedBinaryTree() {
         binaryTreeTraversal.postOrder(BinaryTreeUtils.createBalancedBinaryTreeFor(4, 2, 7, 5, 9, 1, 8));
+    }
+
+    @Test
+    public void testDepthBalancedBinaryTree() {
+        binaryTreeTraversal.depth(BinaryTreeUtils.createBalancedBinaryTreeFor(4, 2, 7, 5, 9, 1, 8));
     }
 
 }
