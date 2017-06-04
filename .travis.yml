@@ -16,4 +16,4 @@ jdk:
   - oraclejdk8
 
 script:
-  - clean check --continue --stacktrace
+  - gradle clean check --continue --stacktrace
