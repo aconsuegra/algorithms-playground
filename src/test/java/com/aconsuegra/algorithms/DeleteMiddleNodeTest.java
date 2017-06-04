@@ -7,7 +7,7 @@ import com.aconsuegra.datastructure.LinkedListUtils;
 import com.aconsuegra.datastructure.ListNode;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class DeleteMiddleNodeTest {
 

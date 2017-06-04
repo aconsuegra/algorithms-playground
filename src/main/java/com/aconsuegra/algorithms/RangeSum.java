@@ -12,8 +12,10 @@ public class RangeSum {
         }
 
         int i = 0;
+        int j = 0;
         int sum = 0;
-        for (int j = 0; j < input.length; j++) {
+
+        while (j < input.length) {
             if (sum + input[j] == target) {
                 return new int[] {i, j};
             } else if (sum + input[j] > target) {
@@ -23,6 +25,7 @@ public class RangeSum {
             } else {
                 sum += input[j];
             }
+            j++;
         }
         return null;
     }

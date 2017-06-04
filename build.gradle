@@ -5,6 +5,7 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply from: 'quality/checkstyle.gradle'
 
 sourceCompatibility = 1.8
 

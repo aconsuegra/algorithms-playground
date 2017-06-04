@@ -2,6 +2,10 @@ package com.aconsuegra.datastructure;
 
 public final class LinkedListUtils {
 
+    private LinkedListUtils() {
+        // Not meant to be instantiated
+    }
+
     public static <T> ListNode<T> createLinkedListFor(T... input) {
         if (input == null || input.length == 0) {
             return null;

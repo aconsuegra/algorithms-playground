@@ -1,6 +1,5 @@
 package com.aconsuegra.algorithms;
 
-import com.aconsuegra.datastructure.BinaryTreeNode;
 import com.aconsuegra.datastructure.ListNode;
 
 /**

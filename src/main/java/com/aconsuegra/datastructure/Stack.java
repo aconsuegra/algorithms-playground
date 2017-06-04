@@ -32,7 +32,7 @@ public class Stack<T> {
         return data;
     }
 
-    private static class StackItem<T> {
+    private static final class StackItem<T> {
         private final T data;
 
         private StackItem<T> next;

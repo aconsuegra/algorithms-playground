@@ -26,7 +26,7 @@ public class PalindromeLinkedList {
         ListNode<T> fast = list;
         ListNode<T> slow = list;
 
-        while(fast != null && fast.getNext() != null) {
+        while (fast != null && fast.getNext() != null) {
             stack.push(slow.getVal());
             slow = slow.getNext();
             fast = fast.getNext().getNext();

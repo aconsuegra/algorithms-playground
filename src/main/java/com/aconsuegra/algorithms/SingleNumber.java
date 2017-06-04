@@ -29,7 +29,7 @@ public class SingleNumber {
     }
 
     public int singleNumberNoMemory(int[] nums) {
-        int result =0;
+        int result = 0;
         for (int num : nums) {
             result ^= num;
         }
