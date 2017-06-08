@@ -1,10 +1,15 @@
 buildscript {
+    ext.kotlin_version = '1.1.2-4'
     repositories {
         mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
 apply plugin: 'java'
+apply plugin: 'kotlin'
 apply from: 'quality/checkstyle.gradle'
 
 sourceCompatibility = 1.8
@@ -15,4 +20,5 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
 }
