@@ -8,8 +8,9 @@ class KZeroMatrix {
     fun setZero(input: Array<Array<Int>>): Array<Array<Int>> {
         val zeroRows = mutableSetOf<Int>()
         val zeroColumns = mutableSetOf<Int>()
-        for ((columnIndex, column) in input.withIndex()) {
-            for ((rowIndex, value) in column.withIndex()) {
+
+        input.forEachIndexed { columnIndex, column ->
+            column.forEachIndexed { rowIndex, value ->
                 if (value == 0) {
                     zeroRows.add(columnIndex)
                     zeroColumns.add(rowIndex)
@@ -17,13 +18,14 @@ class KZeroMatrix {
             }
         }
 
-        for ((columnIndex, column) in input.withIndex()) {
-            for ((rowIndex, _) in column.withIndex()) {
+        input.forEachIndexed { columnIndex, column ->
+            column.forEachIndexed { rowIndex, _ ->
                 if (zeroColumns.contains(columnIndex) || zeroRows.contains(rowIndex)) {
                     input[rowIndex][columnIndex] = 0
                 }
             }
         }
+
         return input
     }
 
