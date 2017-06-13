@@ -1,6 +1,6 @@
 package com.aconsuegra.datastructure
 
-import java.util.*
+import java.util.EmptyStackException
 
 class KStack<T> {
 
