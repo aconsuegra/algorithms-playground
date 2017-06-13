@@ -1,21 +1,26 @@
 buildscript {
-    ext.kotlin_version = '1.1.2-4'
+    ext.kotlin_version = '1.1.2'
     repositories {
-        mavenCentral()
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "gradle.plugin.io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.0.0.M11"
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'kotlin'
 apply from: 'quality/checkstyle.gradle'
+apply from: 'quality/detekt.gradle'
 
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 dependencies {
