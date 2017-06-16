@@ -1,6 +1,6 @@
 package com.aconsuegra.datastructure
 
-data class KListNode<T>(val data:T, var next:KListNode<T>? = null) {
+data class KListNode<T>(val data: T, var next: KListNode<T>? = null) {
 
     fun append(value: T): KListNode<T> {
         val newNode = KListNode(value)
