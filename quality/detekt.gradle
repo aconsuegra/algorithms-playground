@@ -7,4 +7,5 @@ detekt {
     filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
 }
 
+tasks.getByName('detektCheck').finalizedBy detektFormat
 tasks.getByName('check').finalizedBy detektCheck

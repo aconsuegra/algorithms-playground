@@ -11,10 +11,10 @@ class KStack<T> {
     fun peek() = top?.data ?: throw EmptyStackException()
 
     fun pop(): T {
-        top?.let{
+        top?.let {
             top = it.next
             return it.data
-        }?: throw EmptyStackException()
+        } ?: throw EmptyStackException()
     }
 
     fun push(data: T) {

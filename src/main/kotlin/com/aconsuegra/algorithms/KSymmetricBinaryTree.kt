@@ -32,7 +32,7 @@ class KSymmetricBinaryTree {
             return false
         }
 
-        var j = postOrder.length - 1;
+        var j = postOrder.length - 1
         for (c in preOrder) {
             if (c != postOrder[j]) {
                 return false
