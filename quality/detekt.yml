@@ -1,11 +1,11 @@
-autoCorrect: true
+autoCorrect: false
 
 build:
   warningThreshold: 1
   failThreshold: 1
   weights:
     complexity: 2
-    formatting: 0
+    formatting: 1
     LongParameterList: 1
     comments: 0.5
 

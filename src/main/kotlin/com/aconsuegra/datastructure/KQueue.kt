@@ -18,7 +18,7 @@ class KQueue<T> {
             first = it.next
             if (first == null) last = null
             return data
-        }?: throw NoSuchElementException()
+        } ?: throw NoSuchElementException()
     }
 
     fun add(data: T) {
