@@ -13,4 +13,10 @@ class KListNodeTest {
                 iz("KListNode(data=1, next=KListNode(data=2, next=KListNode(data=3, next=null)))"))
     }
 
+    @Test
+    fun testSize() {
+        val listNode = KListNode(1, KListNode(2))
+        assertThat(listNode.size(), iz(2))
+    }
+
 }
