@@ -8,7 +8,7 @@ import com.aconsuegra.datastructure.KListNode
 class KReturnKthToLast {
 
     fun <T> findKthElement1(list: KListNode<T>?, k: Int): KListNode<T>? {
-        val position = getSize(list) - k - 1
+        val position = (list?.size() ?: 0) - k - 1
         if (position < 0) {
             return null
         }
@@ -22,16 +22,6 @@ class KReturnKthToLast {
             head = head.next
         }
         return null
-    }
-
-    private fun <T> getSize(list: KListNode<T>?): Int {
-        var size = 0
-        var head = list
-        while (head != null) {
-            size++
-            head = head.next
-        }
-        return size
     }
 
     fun <T> findKthElement2(list: KListNode<T>?, k: Int): KListNode<T>? {

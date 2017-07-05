@@ -12,4 +12,14 @@ data class KListNode<T>(val data: T, var next: KListNode<T>? = null) {
         return this
     }
 
+    fun size(): Int {
+        var size = 1
+        var head = this
+        while (head.next != null) {
+            size++
+            head = head.next as KListNode<T>
+        }
+        return size
+    }
+
 }
