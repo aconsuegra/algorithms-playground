@@ -10,20 +10,20 @@ class KZeroMatrixTest {
 
     @Test
     fun test2x2Matrix() {
-        assertThat(zeroMatrix.setZero(arrayOf(arrayOf(0, 1), arrayOf(2, 0))),
-                iz(arrayOf(arrayOf(0, 0), arrayOf(0, 0))))
+        assertThat(zeroMatrix.setZero(arrayOf(intArrayOf(0, 1), intArrayOf(2, 0))),
+                iz(arrayOf(intArrayOf(0, 0), intArrayOf(0, 0))))
     }
 
     @Test
     fun test3x3Matrix() {
-        assertThat(zeroMatrix.setZero(arrayOf(arrayOf(1, 2, 3), arrayOf(4, 5, 6), arrayOf(7, 0, 9))),
-                iz(arrayOf(arrayOf(1, 0, 3), arrayOf(4, 0, 6), arrayOf(0, 0, 0))))
+        assertThat(zeroMatrix.setZero(arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6), intArrayOf(7, 0, 9))),
+                iz(arrayOf(intArrayOf(1, 0, 3), intArrayOf(4, 0, 6), intArrayOf(0, 0, 0))))
     }
 
     @Test
     fun test3x3NoZerosMatrix() {
-        assertThat(zeroMatrix.setZero(arrayOf(arrayOf(1, 2, 3), arrayOf(4, 5, 6), arrayOf(7, 8, 9))),
-                iz(arrayOf(arrayOf(1, 2, 3), arrayOf(4, 5, 6), arrayOf(7, 8, 9))))
+        assertThat(zeroMatrix.setZero(arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6), intArrayOf(7, 8, 9))),
+                iz(arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6), intArrayOf(7, 8, 9))))
     }
 
 }

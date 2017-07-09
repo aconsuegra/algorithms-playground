@@ -5,7 +5,7 @@ package com.aconsuegra.algorithms
  */
 class KZeroMatrix {
 
-    fun setZero(input: Array<Array<Int>>): Array<Array<Int>> {
+    fun setZero(input: Array<IntArray>): Array<IntArray> {
         val zeroRows = mutableSetOf<Int>()
         val zeroColumns = mutableSetOf<Int>()
 
