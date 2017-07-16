@@ -4,7 +4,7 @@ import com.aconsuegra.datastructure.ListNode;
 import com.aconsuegra.datastructure.Stack;
 
 /**
- * Implement a funcion to check if a linked list is a palindrome
+ * Implement a function to check if a linked list is a palindrome
  */
 public class PalindromeLinkedList {
 
