@@ -9,10 +9,6 @@ package com.aconsuegra.algorithms;
 public class MoveZeros {
 
     public int[] move(int[] a) {
-
-        int ii = 1000;
-        System.out.println(ii >> 2);
-
         if (a == null || a.length == 0) {
             return new int[] {};
         }
