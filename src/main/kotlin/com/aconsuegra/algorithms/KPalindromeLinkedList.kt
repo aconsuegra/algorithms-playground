@@ -18,8 +18,8 @@ class KPalindromeLinkedList {
         var fast = input
 
         while (fast != null && fast.next != null) {
-            stack.push(slow?.data as T)
-            slow = slow.next
+            slow?.data?.let { stack.push(it) }
+            slow = slow?.next
             fast = fast.next?.next
         }
 

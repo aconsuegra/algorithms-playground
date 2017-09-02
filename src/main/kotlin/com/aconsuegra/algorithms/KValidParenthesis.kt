@@ -27,6 +27,6 @@ class KValidParenthesis {
     fun isOpening(input: Char) = input == '(' || input == '{' || input == '['
 
     fun isValidClosing(input: Char, top: Char)
-            = (input == ')' && top == '(') || (input == '}' && top == '{') || (input == ']' && top == '[')
+            = input == ')' && top == '(' || input == '}' && top == '{' || input == ']' && top == '['
 
 }

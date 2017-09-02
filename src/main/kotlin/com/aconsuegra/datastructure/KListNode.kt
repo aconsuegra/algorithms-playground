@@ -1,5 +1,6 @@
 package com.aconsuegra.datastructure
 
+@Suppress("UnsafeCast")
 data class KListNode<T>(val data: T, var next: KListNode<T>? = null) {
 
     fun append(value: T): KListNode<T> {
