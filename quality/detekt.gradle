@@ -1,10 +1,12 @@
 apply plugin: "io.gitlab.arturbosch.detekt"
 
 detekt {
-    version = "1.0.0.M11"
-    input = "$input/src/main/kotlin"
-    config = "${project.rootDir}/quality/detekt.yml"
-    filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+    version = "1.0.0.RC4"
+    profile("main") {
+        input = "${project.rootDir}/src/main/kotlin"
+        config = "${project.rootDir}/quality/detekt.yml"
+        filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+    }
 }
 
 tasks.getByName('detektCheck').finalizedBy detektFormat

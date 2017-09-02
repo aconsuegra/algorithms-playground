@@ -17,12 +17,12 @@ class KLongestCommonPrefix {
     }
 
     private fun findCommonPrefix(prefix: String, str: String) : String {
-        val sb = StringBuilder()
+        val builder = StringBuilder()
         val length = Math.min(prefix.length, str.length)
         (0..length - 1)
                 .takeWhile { prefix[it] == str[it] }
-                .forEach { sb.append(prefix[it]) }
-        return sb.toString()
+                .forEach { builder.append(prefix[it]) }
+        return builder.toString()
     }
 
 }
