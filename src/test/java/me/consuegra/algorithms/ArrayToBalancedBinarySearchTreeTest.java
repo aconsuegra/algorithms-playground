@@ -21,7 +21,7 @@ public class ArrayToBalancedBinarySearchTreeTest {
     @Test
     public void testArrayToTree() {
         BinaryTreeNode<Integer> tree = BinaryTreeUtils.createBalancedSearchTreeFor(5, 2, 1, 4, 8, 7, 9);
-        assertThat(arrayToBalancedBinarySearchTree.arrayToTree(new int[] {4, 2, 7, 5, 9, 1, 8}), is(tree));
+        assertThat(arrayToBalancedBinarySearchTree.arrayToTree(new int[] {2, 2, 7, 5, 9, 1, 8}), is(tree));
     }
 
 }
