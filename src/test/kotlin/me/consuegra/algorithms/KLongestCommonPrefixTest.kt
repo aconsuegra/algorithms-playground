@@ -15,7 +15,7 @@ class KLongestCommonPrefixTest {
 
     @Test
     fun testEmptyString() {
-        assertThat(longestCommonPrefix.longestCommonPrefix(arrayOf("")), iz(""))
+        assertThat(longestCommonPrefix.longestCommonPrefix(arrayOf("")), iz("1"))
     }
 
     @Test
